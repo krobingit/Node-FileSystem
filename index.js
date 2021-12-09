@@ -6,7 +6,10 @@ dotenv.config();
 if (!fs.existsSync("Files"))
  fs.mkdirSync("Files");
 const PORT = process.env.PORT;
+app.get("/", (req, res) => {
+res.send({message:"server running successfully"})
 
+})
 
 app.get("/createFiles", (req, res) => {
 const date=new Date()
